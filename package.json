@@ -1,0 +1,39 @@
+{
+  "name": "result-management",
+  "version": "1.0.0",
+  "description": "result management using MERN",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "client-install": "npm install --prefix client",
+    "build": "cd client && npm run build",
+    "heroku-postbuild":"npm run client-install && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "manage-admin": "./scripts/manageAdmin.js",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+  },
+  "author": "Wishnu das",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^5.0.1",
+    "commander": "^9.1.0",
+    "concurrently": "^7.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "generate-password": "^1.7.0",
+    "inquirer": "^8.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.5",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "xlsx": "^0.17.5"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
